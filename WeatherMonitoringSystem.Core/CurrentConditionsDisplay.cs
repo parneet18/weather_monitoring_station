@@ -8,13 +8,13 @@ namespace WeatherMonitoringSystem.Core
     /// </summary>
     public class CurrentConditionsDisplay : IDisplay, IObserver
     {
-        private readonly IDisplay decoratedDisplay;
+        private readonly IDisplay? decoratedDisplay;
 
         /// <summary>
         /// Constructor to initialize the CurrentConditionsDisplay with an optional decorated display.
         /// </summary>
         /// <param name="decoratedDisplay">Optional decorated display to add additional information.</param>
-        public CurrentConditionsDisplay(IDisplay decoratedDisplay = null)
+        public CurrentConditionsDisplay(IDisplay? decoratedDisplay = null)
         {
             this.decoratedDisplay = decoratedDisplay;
         }
